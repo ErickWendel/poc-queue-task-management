@@ -1,0 +1,21 @@
+{
+    "apps": [
+        {
+            "name": "bqueue",
+            "script": "index.js",
+            "instances": 4,
+            "ignore_watch": [
+                "node_modules",
+                ".DS_Store",
+                ".vscode",
+                "logs",
+                ".git"
+            ],
+            "watch": true,
+            "error_file": "./logs/bqueue_error.log",
+            "out_file": "./logs/bqueue_out.log",
+            "pid_file": "./logs/bqueue_pid.pid",
+            "exec_mode": "cluster_mode"
+        }
+    ]
+}

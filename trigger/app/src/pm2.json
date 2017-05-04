@@ -1,0 +1,21 @@
+{
+    "apps": [
+        {
+            "name": "trigger",
+            "script": "./index.js",
+            "instances": 1,
+            "ignore_watch": [
+                "node_modules",
+                ".DS_Store",
+                ".vscode",
+                "logs",
+                ".git"
+            ],
+            "watch": true,
+            "error_file": "./logs/trigger_error.log",
+            "out_file": "./logs/trigger_out.log",
+            "pid_file": "./logs/trigger_pid.pid",
+            "exec_mode": "cluster_mode"
+        }
+    ]
+}

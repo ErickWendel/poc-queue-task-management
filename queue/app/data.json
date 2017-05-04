@@ -1,0 +1,128 @@
+{
+    "tasks":  [
+         {
+            "EAN": 123123123,
+            "GRUPO": 10,
+            "PRECODE_78": 21.99,
+            "SECAO": 362,
+            "PESO_UN": 0.7,
+            "DESCRICAO": "PRODUTO 700G         ",
+            "REF_RMS": "40911764",
+            "PRECOPOR_78": 21.99,
+            "FILLER_RMS": "1",
+            "PRECOPORKG_78": null,
+            "PRECOPESOFEXC": null,
+            "LARGURA": 0.33,
+            "ULTIMA_SAIDA": "2017-02-25 00:00:00",
+            "DTENTRADALINHA": "2016-10-26 00:00:00",
+            "UNIDADEMEDIDA": "UN",
+            "SUBGRUPO": 1,
+            "_id": "58b9d4641a815680cbd39e78",
+            "ULTIMA_ENTRADA": "2016-12-28 00:00:00",
+            "DTSAIDALINHA": null,
+            "EST_WEB_78": 0,
+            "EST_78": 0,
+            "SAIDA_MEDIA": 0.3,
+            "PRECOPESDE_78": 21.99,
+            "ALTURA": 0.21,
+            "PRECOPESPOR_78": 21.99,
+            "PRECOOFEXC": null,
+            "COMPRIMENTO": 0.59
+        }
+    ],
+    "integrations": [
+        {
+            "created_at": "2017-03-03T20:53:53.887Z",
+            "company": {
+                "__v": 0,
+                "name": "FCamara",
+                "_id": "58b9b907985689b9556f0632"
+            },
+            "_id": "58b9d7e1080a55bce841cdf4",
+            "frequency": {
+                "by_minute": 1
+            },
+            "__v": 0,
+            "application": {
+                "steps": [
+                    {
+                        "__v": 0,
+                        "created_at": "2017-03-03T20:45:30.698Z",
+                        "name": "Steps for Integration",
+                        "call": {
+                            "file": "getItens",
+                            "name": "GetItens"
+                        },
+                        "description": "make some integration",
+                        "order": 1,
+                        "type": "trigger",
+                        "connection": {
+                            "created_at": "2017-03-03T18:46:42.261Z",
+                            "fields": [
+                                {
+                                    "value": "mongodb",
+                                    "key": "type",
+                                    "_id": "58b9ba12985689b9556f0635"
+                                },
+                                {
+                                    "value": "mongodb://localhost:27017/apps",
+                                    "key": "connection_string",
+                                    "_id": "58b9ba12985689b9556f0635"
+                                },
+                                {
+                                    "value": "fcamara_products",
+                                    "key": "collection_name",
+                                    "_id": "58b9ba12985689b9556f0634"
+                                }
+                            ],
+                            "__v": 0,
+                            "name": "MongoDB FCamara",
+                            "_id": "58b9ba12985689b9556f0633"
+                        },
+                        "_id": "58b9d5ea080a55bce841cdee"
+                    },
+                    {
+                        "__v": 0,
+                        "created_at": "2017-03-03T20:48:01.724Z",
+                        "name": "Steps for Integration",
+                        "call": {
+                            "file": "sendItens",
+                            "name": "SendItens"
+                        },
+                        "description": "make some integration",
+                        "order": 2,
+                        "type": "action",
+                        "connection": {
+                            "created_at": "2017-03-03T20:47:49.213Z",
+                            "fields": [
+                                {
+                                    "value": "postgreSQL",
+                                    "key": "type",
+                                    "_id": "58b9ba12985689b9556f0635"
+                                },
+                                {
+                                    "database": "linkapi-v2",
+                                    "password": "admin",
+                                    "user": "admin",
+                                    "table": "products",
+                                    "host": "localhost",
+                                    "key": "connection_string"
+                                }
+                            ],
+                            "__v": 0,
+                            "name": "PostGres FCamara",
+                            "_id": "58b9d675080a55bce841cdef"
+                        },
+                        "_id": "58b9d681080a55bce841cdf2"
+                    }
+                ],
+                "name": "FCamara Application",
+                "created_at": "2017-03-03T20:53:06.826Z",
+                "description": "thats an application",
+                "__v": 0,
+                "_id": "58b9d7b2080a55bce841cdf3"
+            },
+            "name": "FCamara Integrations"
+        }
+    ]
+}

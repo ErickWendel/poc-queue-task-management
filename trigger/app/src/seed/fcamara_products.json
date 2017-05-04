@@ -1,0 +1,34 @@
+[
+    {
+        "_id": {
+            "$oid": "58b9d4641a815680cbd39e72"
+        },
+        "SECAO": 1,
+        "GRUPO": 1,
+        "SUBGRUPO": 1,
+        "REF_RMS": "40911764",
+        "DESCRICAO": "PRODUTO 700G         ",
+        "EAN": 123123123,
+        "ALTURA": 0.21,
+        "LARGURA": 0.33,
+        "COMPRIMENTO": 0.59,
+        "UNIDADEMEDIDA": "UN",
+        "FILLER_RMS": "1",
+        "PESO_UN": 0.7,
+        "EST_78": 0,
+        "SAIDA_MEDIA": 0.3,
+        "ULTIMA_SAIDA": "2017-02-25 00:00:00",
+        "ULTIMA_ENTRADA": "2016-12-28 00:00:00",
+        "EST_WEB_78": 0,
+        "DTENTRADALINHA": "2016-10-26 00:00:00",
+        "DTSAIDALINHA": null,
+        "PRECODE_78": 21.99,
+        "PRECOPOR_78": 21.99,
+        "PRECOOFEXC": null,
+        "PRECOPESDE_78": 21.99,
+        "PRECOPESPOR_78": 21.99,
+        "PRECOPESOFEXC": null,
+        "PRECOPORKG_78": null
+    }
+
+]

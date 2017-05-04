@@ -1,0 +1,62 @@
+[
+    {
+        "_id": {
+            "$oid": "58b9ba12985689b9556f0633"
+        },
+        "name": "MongoDB FCamara",
+        "created_at": {
+            "$date": "2017-03-03T18:46:42.261Z"
+        },
+        "fields": [
+            {
+                "key": "type",
+                "value": "mongodb",
+                "_id": {
+                    "$oid": "58b9ba12985689b9556f0635"
+                }
+            },
+            {
+                "key": "connection_string",
+                "value": "mongodb://localhost:27017/apps",
+                "_id": {
+                    "$oid": "58b9ba12985689b9556f0635"
+                }
+            },
+            {
+                "key": "collection_name",
+                "value": "fcamara_products",
+                "_id": {
+                    "$oid": "58b9ba12985689b9556f0634"
+                }
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "58b9d675080a55bce841cdef"
+        },
+        "name": "PostGres FCamara",
+        "created_at": {
+            "$date": "2017-03-03T20:47:49.213Z"
+        },
+        "fields": [
+            {
+                "key": "type",
+                "value": "postgreSQL",
+                "_id": {
+                    "$oid": "58b9ba12985689b9556f0635"
+                }
+            },
+            {
+                "key": "connection_string",
+                "user": "admin",
+                "password": "admin",
+                "host": "localhost",
+                "database": "linkapi-v2" ,
+                "table": "products"
+            } 
+        ],
+        "__v": 0
+    }
+]

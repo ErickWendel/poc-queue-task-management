@@ -1,0 +1,21 @@
+{
+    "apps": [
+        {
+            "name": "logger",
+            "script": "./index.js",
+            "instances": 2,
+            "ignore_watch": [
+                "node_modules",
+                ".DS_Store",
+                ".vscode",
+                "logs",
+                ".git"
+            ],
+            "watch": true,
+            "error_file": "./logs/logger_error.log",
+            "out_file": "./logs/logger_out.log",
+            "pid_file": "./logs/logger_pid.pid",
+            "exec_mode": "cluster_mode"
+        }
+    ]
+}

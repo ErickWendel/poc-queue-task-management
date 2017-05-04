@@ -1,0 +1,66 @@
+version: "2"
+ 
+services:
+
+  interface:
+    build: ./interface
+    ports:
+        - "80:80"
+
+  queue:
+    build: ./queue
+    ports:
+      - "5001:5001"
+    links: 
+      - mongo
+      - redis
+      - rabbitmq
+
+  bqueue:
+    build: ./bqueue
+    
+  trigger:
+    build: ./trigger
+    ports: 
+      - 8080:80
+
+  logger:
+    build: ./logger
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis:latest
+    volumes:
+      - ./redis.conf:/etc/redis.conf
+    ports:
+      - "6379:6379" 
+
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
+
+  postgres:
+    restart: always
+    image: sameersbn/postgresql:9.6-2
+    ports:
+      - "5432:5432"
+    environment:
+      - DEBUG=false 
+      - DB_USER=admin
+      - DB_PASS=admin
+      - DB_NAME=linkapi-v2
+      - DB_TEMPLATE=
+
+      - DB_EXTENSION=
+
+      - REPLICATION_MODE=
+      - REPLICATION_USER=
+      - REPLICATION_PASS=
+      - REPLICATION_SSLMODE=
+    volumes:
+      - /srv/docker/postgresql:/var/lib/postgresql

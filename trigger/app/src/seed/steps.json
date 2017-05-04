@@ -1,0 +1,42 @@
+[
+    {
+        "_id": {
+            "$oid": "58b9d5ea080a55bce841cdee"
+        },
+        "name": "Steps for Integration",
+        "description": "make some integration",
+        "connection": {
+            "$oid": "58b9ba12985689b9556f0633"
+        },
+        "type": "trigger",
+        "order": 1,
+        "created_at": {
+            "$date": "2017-03-03T20:45:30.698Z"
+        },
+        "call": {
+            "name": "GetItens",
+            "file": "getItens"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "58b9d681080a55bce841cdf2"
+        },
+        "name": "Steps for Integration",
+        "description": "make some integration",
+        "connection": {
+            "$oid": "58b9d675080a55bce841cdef"
+        },
+        "type": "action",
+        "order": 2,
+        "created_at": {
+            "$date": "2017-03-03T20:48:01.724Z"
+        },
+        "call": {
+            "name": "SendItens",
+            "file": "sendItens"
+        },
+        "__v": 0
+    }
+]

@@ -1,0 +1,19 @@
+{
+    "_id": {
+        "$oid": "58b9d7b2080a55bce841cdf3"
+    },
+    "name": "FCamara Application",
+    "description": "that's an application",
+    "created_at": {
+        "$date": "2017-03-03T20:53:06.826Z"
+    },
+    "steps": [
+        {
+            "$oid": "58b9d5ea080a55bce841cdee"
+        },
+        {
+            "$oid": "58b9d681080a55bce841cdf2"
+        }
+    ],
+    "__v": 0
+}

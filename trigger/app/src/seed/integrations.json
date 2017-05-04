@@ -1,0 +1,19 @@
+{
+    "_id": {
+        "$oid": "58b9d7e1080a55bce841cdf4"
+    },
+    "name": "FCamara Integrations",
+    "company": {
+        "$oid": "58b9b907985689b9556f0632"
+    },
+    "application": {
+        "$oid": "58b9d7b2080a55bce841cdf3"
+    },
+    "created_at": {
+        "$date": "2017-03-03T20:53:53.887Z"
+    },
+    "frequency": {
+        "by_minute": 1
+    },
+    "__v": 0
+}
